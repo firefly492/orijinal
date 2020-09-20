@@ -10,11 +10,10 @@
 
 <div class="wrapper-image">
   <h1 class="wrapper-title">
-    likeimage<%#= @current_user.name %>
+    <%= current_user.name %> 's  dialy
   </h1>
 </div>
 
-<% @post.each do |post| %>
   <div class="main-page">
     <div class="left-page">
       <div class="left-page-calendar">
@@ -24,7 +23,7 @@
       </div>
       <div class="left-page-archive">
         <p>月別Archive</p>
-        <%= post.created_at %>
+        <%#= @post.created_at.to_s(:datetime_jp) %>
       </div>
       <div class="left-page-category">
         <p>Category</p>
@@ -34,18 +33,26 @@
 
     <div class="right-page">
       <div class="right-page-article">
-        <p>ArticleCatalog</p>
-          <%= post.created_at %>
-          <%= image_tag post.image.variant(resize:'600x600') %>
-          <%= post.content %>
+        <p>投稿一覧</p>
       </div>
-      <div class="right-page-image">
-        <p>2020/9/20</p>
-        <p>Image</p>
-      </div>
-      <div class="right-page-content">
-        <p>Content</p>
+      <div class="right-post-data">
+        <% @post.each do |post| %>
+          <div class="right-page-day">
+            <%= post.created_at.to_s(:datetime_jp) %>
+          </div>
+          <div class="right-page-title">
+            <%= post.title %>
+          </div>
+          <div class="right-page-image">
+            <% if post.image.attached? %>
+              <%= image_tag post.image.variant(resize:'600x600') %>
+            <% end %>
+          </div>
+          <div class="right-page-content">
+            <%= post.content %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
-<% end %>
+

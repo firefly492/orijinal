@@ -15,7 +15,8 @@
 }
 
 .wrapper-title {
-  font-size: 20px;
+  font-size: 50px;
+  padding-left: 600px;
 }
 
 .main-page{
@@ -23,7 +24,6 @@
 }
 .left-page {
   background-color:#EEFFFF;
-  height: 100vh;
   width: 30vw;
   font-size: 25px;
   padding-left: 30px;
@@ -45,19 +45,41 @@
 
 .right-page {
   background-color: #FFFFEE;
-  height: 100vh;
   width: 70vw;
   font-family: "Arial", "メイリオ";
-  text-align: center;
+  padding-left: 200px;
 }
 .right-page-article {
-  font-size: 60px;
+  font-size: 25px;
   font-family: "Times New Roman";
   margin-top: 50px;
+  margin-left: 260px;
+}
+.right-post-data {
+  font-size: 60px;
+  font-family: "Times New Roman";
+}
+.right-page-title {
+  font-size: 40px;
+  font-family: "ヒラギノ角ゴ Pro W3";
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 30px;
+  width: 600px;
+}
+.right-page-day {
+  font-size: 20px;
+  font-family: "Times New Roman";
+  color:  gray;
+  margin-top: 50px;
+  margin-bottom: 20px
 }
 .right-page-image {
   font-family: "Times New Roman";
 }
 .right-page-content {
-  font-family: "Times New Roman";
+  font-size: 30px;
+  font-family: "ヒラギノ角ゴ Pro W3";
+  padding-top: 30px;
+  padding-bottom: 30px;
+  white-space: pre;
 }
