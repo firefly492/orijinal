@@ -15,45 +15,70 @@
 }
 
 .wrapper-title {
-  font-size: 50px;
+  font-size: 30px;
   padding-left: 600px;
 }
 
 .main-page{
   display: flex;
+  margin-left: 15vw;
+  margin-right: 10vw;
 }
 .left-page {
   background-color:#EEFFFF;
-  width: 30vw;
+  width: 20vw;
   font-size: 25px;
-  padding-left: 30px;
 }
-.left-page-calendar {
-  font-size: 60px;
+.left-page-btn {
+  font-size: 25px;
   font-style:italic;
   font-family: "Times New Roman";
-  margin-top: 100px;
+  margin: 50px 0;
+  text-align: center;
+}
+.left-page-send {
+  text-decoration: underline;
+}
+.left-page-bottom {
+  padding: 30px;
+}
+.left-page-calendar {
+  font-style:italic;
+  font-family: "Times New Roman";
+}
+.left-page-calendar-figure {
+  background-color: burlywood;
+  height: 200px;
+  width: 220px;
+  margin-top: 20px;
 }
 .left-page-archive{
   font-style:italic;
   font-family: "Times New Roman";
+  margin: 20px 0;
 }
 .left-page-category {
   font-style:italic;
   font-family: "Times New Roman";
+  margin: 20px 0;
+}
+.left-page-tag {
+  font-style:italic;
+  font-family: "Times New Roman";
+  margin: 20px 0;
 }
 
 .right-page {
   background-color: #FFFFEE;
-  width: 70vw;
+  width: 55vw;
   font-family: "Arial", "メイリオ";
-  padding-left: 200px;
+  padding: 0 50px;
 }
 .right-page-article {
   font-size: 25px;
   font-family: "Times New Roman";
+  text-align: center;
   margin-top: 50px;
-  margin-left: 260px;
 }
 .right-post-data {
   font-size: 60px;
@@ -81,5 +106,10 @@
   font-family: "ヒラギノ角ゴ Pro W3";
   padding-top: 30px;
   padding-bottom: 30px;
-  white-space: pre;
+  line-height: 35px;
 }
+
+// .right-right-right {
+//   background-color: yellowgreen;
+//   width: 10vw;
+// }

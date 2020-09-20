@@ -16,18 +16,25 @@
 
   <div class="main-page">
     <div class="left-page">
-      <div class="left-page-calendar">
-        <%= link_to "投稿する", new_post_path %>
-        <h1>Calendar</h1>
-          <p>カレンダー</p>
+      <div class="left-page-btn">
+        <%= link_to "投稿する", new_post_path, class: "left-page-send"%>
       </div>
-      <div class="left-page-archive">
-        <p>月別Archive</p>
-        <%#= @post.created_at.to_s(:datetime_jp) %>
-      </div>
-      <div class="left-page-category">
-        <p>Category</p>
-        <p>Tag</p>
+      <div class="left-page-bottom">
+        <div class="left-page-calendar">
+          <h1>カレンダー</h1>
+            <div class="left-page-calendar-figure">
+            </div>
+        </div>
+        <div class="left-page-archive">
+          <p>月別アーカイブ</p>
+          <%#= @post.created_at.to_s(:datetime_jp) %>
+        </div>
+        <div class="left-page-tag">
+          <p>カテゴリー</p>
+        </div>
+        <div class="left-page-category">
+          <p>タグ</p>
+        </div>
       </div>
     </div>
 
@@ -49,10 +56,11 @@
             <% end %>
           </div>
           <div class="right-page-content">
-            <%= post.content %>
+            <%= safe_join(post.content.split("\n"),tag(:br)) %>
           </div>
         <% end %>
       </div>
     </div>
+    <div class="right-right-right">
   </div>
 
