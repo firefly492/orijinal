@@ -1,0 +1,50 @@
+<%= render "shared/header" %>
+
+<%#= form_with model: @post, url: posts_path, method: :POST, local: true do |f| %>
+  <%# <div class="posts-top">
+    <%= f.file_field :image, id:"item-image" %>
+    <%# <%= f.submit '送信', class: 'form-submit' %>
+  <%# </div>
+<% end %>
+  <%#= image_tag @post.image, class: 'message-image' if @post.image.attached?%>
+
+<div class="wrapper-image">
+  <h1 class="wrapper-title">
+    likeiamge<%#= @current_user.name %>
+  </h1>
+</div>
+
+<%# <% @post.each do |item| %>
+  <div class="main-page">
+    <div class="left-page">
+      <div class="left-page-calendar">
+        <%= link_to "投稿する", new_post_path %>
+        <h1>Calendar</h1>
+          <p>カレンダー</p>
+      </div>
+      <div class="left-page-archive">
+        <p>月別Archive</p>
+        <%# <%= @post.create_at %>
+      </div>
+      <div class="left-page-category">
+        <p>Category</p>
+        <p>Tag</p>
+      </div>
+    </div>
+
+    <div class="right-page">
+      <div class="right-page-article">
+        <p>ArticleCatalog</p>
+          <%# <%= @post.create_at %>
+          <%# <%= image_tag @post.iamge %>
+          <%# <%= @post.content %>
+      </div>
+      <div class="right-page-image">
+        Image
+      </div>
+      <div class="right-page-content">
+        Content
+      </div>
+    </div>
+  </div>
+<%# <% end %> %>

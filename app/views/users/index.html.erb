@@ -1,0 +1,36 @@
+<%= render "shared/header" %>
+
+<div class="top-image">
+  <h1 class="top-title">
+    Mydialy
+  </h1>
+  <p class="top-content">
+    〜日々の出来事、パソコンで書いてみませんか？〜
+  </p>
+</div>
+
+<div class="bottom-info">
+  <div class="bottom-title">
+    <h1 class="bottom-title-sub">Mydialyについて</h1>
+  </div>
+  <div class="bottom-content">
+    <p class="bottom-content-sub">
+    日記を始めたいけど、毎日書くのはちょっと・・・。<br>
+    <br>パソコンで出来たらいいな〜。<br>
+    <br>携帯で撮った写真も一緒にのせたいな〜。<br>
+    <br>そんなあなたにおすすすめ。<br>
+    <br>パソコンで簡単にブログのような日記が作れます。<br>
+    <br>まずは1日書いてみませんか？</p>
+    <div class='login-new-btn'>
+      <% if user_signed_in? %>
+        <%= link_to current_user.name, posts_path, class: "user-nickname", class: 'bottom-new' %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'bottom-log' %>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path, class:'bottom-new' %>
+        <%= link_to "ログイン", user_session_path, class:'bottom-log' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

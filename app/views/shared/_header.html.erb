@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="left-header">
+    <div class="header-title">
+      <%= link_to  "/" do %>
+        <%= image_tag "images.png", class:"dialy-icon" %>
+          <span class="header-title-name">Mydialy</span>
+      <% end %>
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+      <% if user_signed_in? %>
+        <%= link_to current_user.name, posts_path, class: "user-nickname", class: 'header-content' %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-content' %>
+      <% else %>
+        <%= link_to  "新規登録", new_user_registration_path, class: 'header-content' %>
+        <%= link_to  "ログイン", user_session_path, class: 'header-content' %>
+      <% end %>
+    </div>
+  </div>
+</div>

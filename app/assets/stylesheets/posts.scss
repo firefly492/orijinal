@@ -1,0 +1,63 @@
+.wrapper-image {
+  width: 100vw;
+  height: 50vh;
+  background-image: image-url('cat-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrapper-title {
+  font-size: 20px;
+}
+
+.main-page{
+  display: flex;
+}
+.left-page {
+  background-color:#EEFFFF;
+  height: 100vh;
+  width: 30vw;
+  font-size: 25px;
+  padding-left: 30px;
+}
+.left-page-calendar {
+  font-size: 60px;
+  font-style:italic;
+  font-family: "Times New Roman";
+  margin-top: 100px;
+}
+.left-page-archive{
+  font-style:italic;
+  font-family: "Times New Roman";
+}
+.left-page-category {
+  font-style:italic;
+  font-family: "Times New Roman";
+}
+
+.right-page {
+  background-color: #FFFFEE;
+  height: 100vh;
+  width: 70vw;
+  font-family: "Arial", "メイリオ";
+  text-align: center;
+}
+.right-page-article {
+  font-size: 60px;
+  font-family: "Times New Roman";
+  margin-top: 50px;
+}
+.right-page-image {
+  font-family: "Times New Roman";
+}
+.right-page-content {
+  font-family: "Times New Roman";
+}
