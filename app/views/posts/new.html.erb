@@ -2,8 +2,7 @@
 <%= form_with model: @post,  local: true do |f| %>
 
   <p>
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image, id:"item-image" %>
   </p>
 
   <p>

@@ -10,11 +10,11 @@
 
 <div class="wrapper-image">
   <h1 class="wrapper-title">
-    likeiamge<%#= @current_user.name %>
+    likeimage<%#= @current_user.name %>
   </h1>
 </div>
 
-<%# <% @post.each do |item| %>
+<% @post.each do |post| %>
   <div class="main-page">
     <div class="left-page">
       <div class="left-page-calendar">
@@ -24,7 +24,7 @@
       </div>
       <div class="left-page-archive">
         <p>月別Archive</p>
-        <%# <%= @post.create_at %>
+        <%= post.created_at %>
       </div>
       <div class="left-page-category">
         <p>Category</p>
@@ -35,16 +35,17 @@
     <div class="right-page">
       <div class="right-page-article">
         <p>ArticleCatalog</p>
-          <%# <%= @post.create_at %>
-          <%# <%= image_tag @post.iamge %>
-          <%# <%= @post.content %>
+          <%= post.created_at %>
+          <%= image_tag post.image.variant(resize:'600x600') %>
+          <%= post.content %>
       </div>
       <div class="right-page-image">
-        Image
+        <p>2020/9/20</p>
+        <p>Image</p>
       </div>
       <div class="right-page-content">
-        Content
+        <p>Content</p>
       </div>
     </div>
   </div>
-<%# <% end %> %>
+<% end %>
