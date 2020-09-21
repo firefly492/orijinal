@@ -46,8 +46,9 @@
         <% @post.each do |post| %>
           <div class="right-page-day">
             <%= post.created_at.to_s(:datetime_jp) %>
-              <%= link_to "編集", edit_post_path(post.id), class: "left-page-day"%>
-              <%= link_to "削除", post_path(post.id), method: :DELETE, class: "left-page-day"%>
+              <%= link_to "詳細", post_path(post.id), method: :GET, class: "fight-page-day"%>
+              <%= link_to "編集", edit_post_path(post.id), class: "fight-page-day"%>
+              <%= link_to "削除", post_path(post.id), method: :DELETE, class: "fight-page-day"%>
           </div>
           <div class="right-page-title">
             <%= post.title %>

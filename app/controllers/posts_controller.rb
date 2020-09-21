@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
   def index
     @post = Post.includes(:user).order("created_at DESC")
   end
@@ -16,12 +18,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
         redirect_to posts_path
     else
@@ -30,9 +33,8 @@ class PostsController < ApplicationController
 end
 
   def destroy
-    @post = Post.find(params[:id])
-      @post.destroy
-        redirect_to posts_path
+    @post.destroy
+      redirect_to posts_path
   end
 
   private
@@ -41,3 +43,7 @@ end
     params.require(:post).permit(:title, :content, :image).merge(user_id: current_user.id)
   end
 end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
