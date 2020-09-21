@@ -3,28 +3,29 @@
 <%= render "shared/my_image" %>
 
 <div class="new-post">
-  <h1>日記を書く</h1>
+  <span class="new-post-dialy">日記を書く</span>
+
   <%= form_with model: @post,  local: true do |f| %>
 
     <div class="new-post-archive">
       <div class= "new-post-image">
         <p>写真</p>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, class: "post-image" %>
       </div>
 
       <div class= "new-post-title">
         <p>タイトル</p>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, placeholder: "タイトルを書こう（なくてもOK）", class: "post-title"%>
       </div>
 
       <div class= "new-post-content">
         <p>日記</p>
-        <%= f.text_area :content, placeholder: "1000文字まで" %>
+        <%= f.text_area :content, placeholder: "今日あったことを書こう", class: "post-content" %>
       </div>
 
       <div class= "new-post-submit">
-        <%= f.submit "日記を投稿する" %>
-        <%= link_to 'もどる', posts_path %>
+        <%= f.submit "日記を投稿する", class: "new-post-btn" %>
+          <%= link_to '日記の一覧へもどる', posts_path, class: "new-post-return" %>
       </div>
     </div>
   <% end %>
