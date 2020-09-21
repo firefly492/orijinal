@@ -3,32 +3,29 @@
 <%= render "shared/my_image" %>
 
 <div class="new-post">
-  <span class="new-post-dialy">日記の編集</span>
+  <span class="new-post-dialy">日記の内容</span>
 
-  <%= form_with model: @post,  local: true do |f| %>
-
-    <div class="new-post-archive">
-      <div class= "new-post-image">
-        <p>写真</p>
-        <%= f.file_field :image, class: "post-image" %>
+  <div class="right-page">
+    <div class="right-post-data">
+      <div class="right-page-day">
+        <%= @post.created_at.to_s(:datetime_jp) %>
       </div>
-
-      <div class= "new-post-title">
-        <p>タイトル</p>
-        <%= f.text_field :title, placeholder: "タイトルを書こう（なくてもOK）", class: "post-title"%>
+      <div class="right-page-title">
+        <%= @post.title %>
       </div>
-
-      <div class= "new-post-content">
-        <p>日記</p>
-        <%= f.text_area :content, placeholder: "今日あったことを書こう", class: "post-content" %>
+      <div class="right-page-image">
+        <% if @post.image.attached? %>
+          <%= image_tag @post.image.variant(resize:'600x600') %>
+        <% end %>
       </div>
-
+      <div class="right-page-content">
+        <%= safe_join(@post.content.split("\n"),tag(:br)) %>
+      </div>
       <div class= "new-post-submit">
-        <%= f.submit "日記を編集する", class: "new-post-btn" %>
-          <%= link_to '日記の一覧へもどる', posts_path, class: "new-post-return" %>
+        <%= link_to '日記の一覧へもどる', posts_path, class: "new-post-return" %>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
 
 <%= render "shared/footer"%>
