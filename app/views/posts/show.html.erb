@@ -2,26 +2,33 @@
 
 <%= render "shared/my_image" %>
 
-<h1>New Article</h1>
-<%= form_with model: @post,  local: true do |f| %>
+<div class="new-post">
+  <span class="new-post-dialy">日記の編集</span>
 
-  <p>
-    <%= f.file_field :image, id:"item-image" %>
-  </p>
+  <%= form_with model: @post,  local: true do |f| %>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+    <div class="new-post-archive">
+      <div class= "new-post-image">
+        <p>写真</p>
+        <%= f.file_field :image, class: "post-image" %>
+      </div>
 
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
+      <div class= "new-post-title">
+        <p>タイトル</p>
+        <%= f.text_field :title, placeholder: "タイトルを書こう（なくてもOK）", class: "post-title"%>
+      </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+      <div class= "new-post-content">
+        <p>日記</p>
+        <%= f.text_area :content, placeholder: "今日あったことを書こう", class: "post-content" %>
+      </div>
+
+      <div class= "new-post-submit">
+        <%= f.submit "日記を編集する", class: "new-post-btn" %>
+          <%= link_to '日記の一覧へもどる', posts_path, class: "new-post-return" %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <%= render "shared/footer"%>
