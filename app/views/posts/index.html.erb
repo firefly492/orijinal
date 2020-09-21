@@ -8,62 +8,58 @@
 <% end %>
   <%#= image_tag @post.image, class: 'message-image' if @post.image.attached?%>
 
-<div class="wrapper-image">
-  <h1 class="wrapper-title">
-    <%= current_user.name %> 's  dialy
-  </h1>
+<%= render "shared/my_image" %>
+
+<div class="main-page">
+  <div class="left-page">
+    <div class="left-page-btn">
+      <%= link_to "日記を書く", new_post_path, class: "left-page-send"%>
+    </div>
+    <div class="left-page-bottom">
+      <div class="left-page-calendar">
+        <h1>カレンダー</h1>
+          <div class="left-page-calendar-figure">
+          </div>
+      </div>
+      <div class="left-page-archive">
+        <p>月別アーカイブ</p>
+      </div>
+      <div class="left-page-tag">
+        <p>カテゴリー</p>
+      </div>
+      <div class="left-page-category">
+        <p>タグ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-page">
+    <div class="right-page-article">
+      <p>日記の一覧</p>
+    </div>
+    <div class="right-post-data">
+      <% @post.each do |post| %>
+        <div class="right-page-day">
+          <%= post.created_at.to_s(:datetime_jp) %>
+            <%= link_to "詳細", post_path(post.id), method: :GET, class: "fight-page-day"%>
+            <%= link_to "編集", edit_post_path(post.id), class: "fight-page-day"%>
+            <%= link_to "削除", post_path(post.id), method: :DELETE, class: "fight-page-day"%>
+        </div>
+        <div class="right-page-title">
+          <%= post.title %>
+        </div>
+        <div class="right-page-image">
+          <% if post.image.attached? %>
+            <%= image_tag post.image.variant(resize:'600x600') %>
+          <% end %>
+        </div>
+        <div class="right-page-content">
+          <%= safe_join(post.content.split("\n"),tag(:br)) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
-  <div class="main-page">
-    <div class="left-page">
-      <div class="left-page-btn">
-        <%= link_to "投稿する", new_post_path, class: "left-page-send"%>
-      </div>
-      <div class="left-page-bottom">
-        <div class="left-page-calendar">
-          <h1>カレンダー</h1>
-            <div class="left-page-calendar-figure">
-            </div>
-        </div>
-        <div class="left-page-archive">
-          <p>月別アーカイブ</p>
-          <%#= @post.created_at.to_s(:datetime_jp) %>
-        </div>
-        <div class="left-page-tag">
-          <p>カテゴリー</p>
-        </div>
-        <div class="left-page-category">
-          <p>タグ</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="right-page">
-      <div class="right-page-article">
-        <p>投稿一覧</p>
-      </div>
-      <div class="right-post-data">
-        <% @post.each do |post| %>
-          <div class="right-page-day">
-            <%= post.created_at.to_s(:datetime_jp) %>
-              <%= link_to "詳細", post_path(post.id), method: :GET, class: "fight-page-day"%>
-              <%= link_to "編集", edit_post_path(post.id), class: "fight-page-day"%>
-              <%= link_to "削除", post_path(post.id), method: :DELETE, class: "fight-page-day"%>
-          </div>
-          <div class="right-page-title">
-            <%= post.title %>
-          </div>
-          <div class="right-page-image">
-            <% if post.image.attached? %>
-              <%= image_tag post.image.variant(resize:'600x600') %>
-            <% end %>
-          </div>
-          <div class="right-page-content">
-            <%= safe_join(post.content.split("\n"),tag(:br)) %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="right-right-right">
-  </div>
+<%= render "shared/footer"%>
 

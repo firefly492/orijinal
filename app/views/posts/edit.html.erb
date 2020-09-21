@@ -1,3 +1,8 @@
+<%= render "shared/header" %>
+
+<%= render "shared/my_image" %>
+
+
 <h1>New Article</h1>
 <%= form_with model: @post,  local: true do |f| %>
 
@@ -19,3 +24,5 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<%= render "shared/footer"%>

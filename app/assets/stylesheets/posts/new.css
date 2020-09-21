@@ -1,0 +1,30 @@
+.new-post {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: azure;
+}
+
+.new-post-archive {
+  padding: 50px;
+}
+.new-post-image {
+  font-size: 20px;
+  padding: 20px;
+}
+.input[type="text"]{
+  width: 100%;
+  height: 20px;
+  font-size: 14px;
+}
+.new-post-title {
+  font-size: 20px;
+}
+.new-post-content {
+  font-size: 20px;
+}
+
+.new-post-submit {
+  font-size: 20px;
+}
