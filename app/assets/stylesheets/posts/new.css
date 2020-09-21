@@ -98,3 +98,8 @@ textarea:focus {
   padding: 5px;
 }
 
+.image-li {
+  margin-bottom: 50px;
+  height: 100px;
+  width: 100px;
+}
