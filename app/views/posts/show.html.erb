@@ -22,7 +22,8 @@
         <%= safe_join(@post.content.split("\n"),tag(:br)) %>
       </div>
       <div class= "new-post-submit">
-        <%= link_to '日記の一覧へもどる', posts_path, class: "new-post-return" %>
+        <%= link_to '日記の一覧へもどる', posts_path, class: "show-post-return" %>
+        <%= link_to '日記の編集', edit_post_path(@post.id), class: "show-post-btn" %>
       </div>
     </div>
   </div>

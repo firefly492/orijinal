@@ -1,7 +1,6 @@
 .new-post {
   font-size: 30px;
   padding: 60px;
-  padding-bottom: 50px;
   margin: 50px 300px;
   background-color: azure;
 }
@@ -98,3 +97,4 @@ textarea:focus {
 .input textarea select{
   padding: 5px;
 }
+

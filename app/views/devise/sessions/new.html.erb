@@ -15,7 +15,7 @@
       <h1>ログイン</h1>
     </div>
 
-    <%= render 'shared/error_messages', model: @item %>
+    <%= render 'shared/error_messages' %>
 
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
