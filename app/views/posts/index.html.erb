@@ -35,7 +35,7 @@
 
   <div class="right-page">
     <div class="right-page-article">
-      <p>日記の一覧</p>
+      <p>日記帳</p>
     </div>
     <div class="right-post-data">
       <% @post.each do |post| %>
@@ -57,9 +57,12 @@
           <%= safe_join(post.content.split("\n"),tag(:br)) %>
         </div>
       <% end %>
+      <%= link_to "トップへ", posts_path, class: 'bottom-to-top' %>
     </div>
   </div>
 </div>
+
+
 
 <%= render "shared/footer"%>
 

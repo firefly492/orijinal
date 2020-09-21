@@ -23,7 +23,7 @@
     <br>まずは1日書いてみませんか？</p>
     <div class='login-new-btn'>
       <% if user_signed_in? %>
-        <%= link_to current_user.name, posts_path, class: "user-nickname", class: 'bottom-new' %>
+        <%= link_to "日記帳へ", posts_path, class: 'bottom-new' %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'bottom-log' %>
       <% else %>
         <%= link_to "新規登録", new_user_registration_path, class:'bottom-new' %>
