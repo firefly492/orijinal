@@ -18,7 +18,7 @@
     <div class="left-page-bottom">
       <div class="left-page-calendar">
         <h1>カレンダー</h1>
-          <div class="left-page-calendar-figure">
+          <div id="calendar">
           </div>
       </div>
       <div class="left-page-archive">
@@ -57,11 +57,13 @@
           <%= safe_join(post.content.split("\n"),tag(:br)) %>
         </div>
       <% end %>
-      <%= link_to "トップへ", posts_path, class: 'bottom-to-top' %>
     </div>
   </div>
 </div>
 
+<div class="to-top">
+  <%= link_to "トップへ", posts_path, class: 'bottom-to-top' %>
+</div>
 
 
 <%= render "shared/footer"%>
