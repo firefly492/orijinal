@@ -19,7 +19,7 @@
 }
 .new-post-image {
   font-size: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   position: relative;
 }
 .post-image {
@@ -102,4 +102,17 @@ textarea:focus {
   margin-bottom: 50px;
   height: 100px;
   width: 100px;
+  position: absolute;
+}
+
+#image-list {
+  font-family: 'Hiragino Maru Gothic ProN';
+}
+#image-element {
+  font-size: 20px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.image-element-child {
+  padding-top: 130px;
 }

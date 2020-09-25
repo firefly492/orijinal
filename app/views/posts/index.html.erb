@@ -43,14 +43,14 @@
           <%= post.created_at.to_s(:datetime_jp) %>
             <%= link_to "詳細", post_path(post.id), method: :GET, class: "fight-page-day"%>
             <%= link_to "編集", edit_post_path(post.id), class: "fight-page-day"%>
-            <%= link_to "削除", post_path(post.id), method: :DELETE, class: "fight-page-day"%>
+            <%= link_to "削除", post_path(post.id), method: :DELETE, data: { confirm: "本当に削除しますか？" }, class: "fight-page-day"%>
         </div>
         <div class="right-page-title">
           <%= post.title %>
         </div>
         <div class="right-page-image">
-          <% if post.image.attached? %>
-            <%= image_tag post.image.variant(resize:'600x600') %>
+          <% post.images.each do |p| %>
+            <%= image_tag p.variant(resize: '200x200').processed %>
           <% end %>
         </div>
         <div class="right-page-content">

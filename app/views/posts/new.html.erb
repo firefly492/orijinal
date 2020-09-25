@@ -10,7 +10,7 @@
     <div class="new-post-archive">
       <div class= "new-post-image">
         <p>写真</p>
-        <%= f.file_field :image, class: "post-image" %>
+        <%= f.file_field :image, name: 'post[images][]', class: "post-image", multiple: true %>
       </div>
       <div id="image-list"></div>
 
