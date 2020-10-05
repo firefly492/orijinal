@@ -1,6 +1,6 @@
 # アプリ名
   
- !https://github.com/firefly492/orijinal/blob/master/app/assets/images/dialy-image.png
+ ![アプリ名](https://github.com/firefly492/orijinal/blob/master/app/assets/images/dialy-image.png)
   
 # 概要
 
@@ -52,7 +52,7 @@
 ### トップページ
  
  本サイトのトップページになります。新規登録・ログインをすると「日記帳」「ログアウト」ボタンが表示されます。「日記帳」ボタンを押すと投稿一覧ページへとびます。
- 画面収録 2020-10-05 10.52.37.mov
+ ！[](画面収録 2020-10-05 10.52.37.mov)
  
 ### 新規登録・ログイン画面
  
