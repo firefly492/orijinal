@@ -52,7 +52,7 @@
 ### トップページ
  
  本サイトのトップページになります。新規登録・ログインをすると「日記帳」「ログアウト」ボタンが表示されます。「日記帳」ボタンを押すと投稿一覧ページへとびます。  
- ！[トップ](https://github.com/firefly492/orijinal/blob/master/%E7%94%BB%E9%9D%A2%E5%8F%8E%E9%8C%B2%202020-10-05%2010.52.37.mov)
+ ！[トップ](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.46.22.png)
  
 ### 新規登録・ログイン画面
 
@@ -61,10 +61,20 @@
  ![ログイン](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2011.27.04.png)
  
 ### 投稿一覧ページ
+
+![投稿一覧](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.05.57.png)
+
+![投稿一覧](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.06.10.png)
  
 ### 新規投稿ページ
+
+![ログイン](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.09.46.png)
  
 ### 画像複数投稿
+
+![画像複数投稿](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.11.05.png)
+
+![投稿後のトップページ](https://github.com/firefly492/orijinal/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-10-05%2012.11.42.png)
 
 # 課題や今後追加したい機能
 
