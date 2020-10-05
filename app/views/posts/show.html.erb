@@ -14,8 +14,8 @@
         <%= @post.title %>
       </div>
       <div class="right-page-image">
-        <% if @post.image.attached? %>
-          <%= image_tag @post.image.variant(resize:'600x600') %>
+        <% @post.images.each do |p| %>
+            <%= image_tag p.variant(resize: '200x200').processed %>
         <% end %>
       </div>
       <div class="right-page-content">
